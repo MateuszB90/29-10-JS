@@ -1,0 +1,27 @@
+.nav {
+    @extend %glass;
+    @include flex (space-between,center);
+    padding: 14px 45px;
+    color: $color-white;
+
+
+    & > i {
+        font-size: 35px;
+    }
+
+    .nav-list {
+        @include flex (center,center,15px);
+    }
+    a {
+        text-decoration: none;
+        color: $color-white;
+    }
+    button {
+        padding: 20px 25px;
+        border-radius: 15px;
+        border: none;
+        color: $color-white;
+        background-color: $primary-color;
+    }
+
+}

@@ -1,0 +1,33 @@
+.banner {
+    padding: 14px 45px;
+    color: $color-white;
+
+    .banner-title {
+        font-size: 45px;
+
+    }
+    .banner-subtitle {
+        font-size: 28px;
+        font-weight: 300;
+    }
+    .banner-btn {
+        width: 160px;
+        padding: 10px 0;
+        margin-top: 20px;
+        border-radius: 25px;
+        @extend %glass;
+        color: $color-white;
+        transition: 0.5s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-white;
+            color: rgb(9, 73, 78);
+        }
+
+    }
+    
+
+
+}
+

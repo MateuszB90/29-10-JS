@@ -1,0 +1,60 @@
+.best {
+    margin: 50px 0;
+    padding: 14px 45px;
+
+
+    .best-wrapper {
+        @include flex(center,center,20px) ;
+    }
+
+    .best-title {
+        text-align: center;
+        color: $color-white;
+        margin: 15px 0;
+
+        
+    }
+
+    .best-card {
+        @extend %glass;
+        text-align: center;
+        flex: 1;
+        padding: 30px;
+        color: $color-white;
+        border-radius: 10px;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: $color-white;
+            color: rgb(27, 2, 2);
+            transform: translateY(-25px);
+        }
+        &:hover > img {
+            border-color: black;
+        }
+
+        & > img {
+            width: 100%;
+            border-radius: 50%;
+            padding: 20px;
+            border: 2px solid white;
+            transition: 0.5s;
+
+        }
+
+    }
+    .card-desc {
+        margin: 0 auto;
+        font-weight: 300;
+        opacity: 0 6;
+    }
+
+    .card-btn {
+        padding: 6px 10px;
+        margin: 15px 0;
+        color: $color-white;
+        background-color: $primary-color;
+
+    }
+
+}
