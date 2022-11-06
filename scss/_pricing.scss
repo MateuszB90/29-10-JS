@@ -4,7 +4,11 @@
 }
 
 .pricing-wrapper {
-    @include flex(center,center,20px) ;
+    @include flex(center,center,20px);
+    @media(max-width:768px) {
+        flex-direction: column;
+    }
+ 
 }
 
 
@@ -16,6 +20,7 @@
     color: $color-white;
     border-radius: 10px;
     transition: 0.5s;
+
 
     &:hover {
         background-color: $color-white;

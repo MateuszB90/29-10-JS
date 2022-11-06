@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Open+Sans:wght@300;400;700;800&family=Ubuntu:ital,wght@1,300;1,500;1,700&display=swap");
 .pricing-card, .best .best-card, .banner .banner-btn, .nav {
-  backdrop-filter: blur(9px) saturate(113%);
-  -webkit-backdrop-filter: blur(9px) saturate(113%);
   background-color: rgba(12, 249, 215, 0.16);
   border: 1px solid rgba(209, 213, 219, 0.3);
 }
@@ -39,16 +37,54 @@ ul {
   align-items: center;
   gap: 15px;
 }
+@media (max-width: 1024px) {
+  .nav .nav-list {
+    flex-direction: column;
+  }
+}
 .nav a {
   text-decoration: none;
   color: #fff;
 }
-.nav button {
+.nav .list-btn {
   padding: 20px 25px;
   border-radius: 15px;
   border: none;
   color: #fff;
   background-color: #2fb7cf;
+}
+.nav .menu-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+.nav .menu-btn > i {
+  font-size: 34px;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .nav .menu-btn {
+    display: block;
+  }
+}
+@media (max-width: 1024px) {
+  .nav .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(15, 14, 14, 0.861);
+    min-height: 100vh;
+    width: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: 0.5s;
+  }
+}
+
+.showMenu {
+  transform: translateX(0) !important;
 }
 
 .banner {
@@ -86,6 +122,11 @@ ul {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .best .best-wrapper {
+    flex-direction: column;
+  }
+}
 .best .best-title {
   text-align: center;
   color: #fff;
@@ -98,6 +139,8 @@ ul {
   color: #fff;
   border-radius: 10px;
   transition: 0.5s;
+  width: 90%;
+  min-height: 360px;
 }
 .best .best-card:hover {
   background-color: #fff;
@@ -118,6 +161,7 @@ ul {
   margin: 0 auto;
   font-weight: 300;
   opacity: 0 6;
+  min-height: 40px;
 }
 .best .card-btn {
   padding: 6px 10px;
@@ -135,6 +179,11 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .pricing-wrapper {
+    flex-direction: column;
+  }
 }
 
 .pricing-card {
